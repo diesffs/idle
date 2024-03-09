@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="menu">
+      <button class="menu-button active" onclick="changeContent('stats')">
+        Panel 1
+      </button>
+      <button class="menu-button" onclick="changeContent('boss')">
+        Panel 2
+      </button>
+      <button class="menu-button" onclick="changeContent('achievements')">
+        Panel 3
+      </button>
+      <button class="menu-button fight-button" onclick="changeContent('battle')">
+        Panel 4
+      </button>
+    </div>
+    <div class="main">
+      <div id="stats" class="panel-content">
+        <h1>stats</h1>
+        <h2>Attack -</h2>
+        <h2 id="attack"></h2>
+        <br />
+        <h2>Attack Speed -</h2>
+        <h2 id="attackSpeed"></h2>
+        <br />
+        <h2>Health Points -</h2>
+        <h2 id="healthPoints"></h2>
+        <br />
+      </div>
+      <div id="boss" class="panel-content" style="display: none">
+        <div class="unit">
+          <h1>1 - mouse</h1>
+          <div class="boss-panel">
+            <div class="icon">
+              <img class="icons" src="images/monsters/mouse.png" />
+            </div>
+            <div class="boss-stats">
+              <h3>attributes</h3>
+              <h4>Attack -</h4>
+              <h4 id="mouseAttack"></h4>
+              <br />
+              <h4>AtckSpd -</h4>
+              <h4 id="mouseAttackSpeed"></h4>
+              <br />
+              <h4>HP -</h4>
+              <h4 id="mouseHealthPoints"></h4>
+              <br />
+            </div>
+            <div class="stat-gain">
+              <h3>gives</h3>
+              <h4>Attack</h4>
+              <h4 id="mouseGive"></h4>
+            </div>
+            <div class="kills">
+              <h4>kills -</h4>
+              <h4 id="mouseKills"></h4>
+            </div>
+            <div class="fight">
+              <button class="fight" onclick="changeContent('battle')">
+                fight
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="unit">
+          <h1>2 - tree</h1>
+          <div class="boss-panel">
+            <div class="icon">
+              <img class="icons" src="images/monsters/tree.png" />
+            </div>
+            <div class="boss-stats">100 hp 20 dmg</div>
+            <div class="stat-gain">1 hp 2 dmg</div>
+            <div class="kills">1000 kills</div>
+            <div class="fight">
+              <button class="fight" onclick="changeContent('battle')">
+                fight
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="unit">
+          <h1>3 - dummy</h1>
+          <div class="boss-panel">
+            <div class="icon">
+              <img class="icons" src="images/monsters/dummy.png" />
+            </div>
+            <div class="boss-stats">100 hp 20 dmg</div>
+            <div class="stat-gain">1 hp 2 dmg</div>
+            <div class="kills">1000 kills</div>
+            <div class="fight">
+              <button class="fight" onclick="changeContent('battle')">
+                fight
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="unit">
+          <h1>4 - dog</h1>
+          <div class="boss-panel">
+            <div class="icon">
+              <img class="icons" src="images/monsters/dog.png" />
+            </div>
+            <div class="boss-stats">100 hp 20 dmg</div>
+            <div class="stat-gain">1 hp 2 dmg</div>
+            <div class="kills">1000 kills</div>
+            <div class="fight">
+              <button class="fight" onclick="changeContent('battle')">
+                fight
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="unit">
+          <h1>5 - goblin</h1>
+          <div class="boss-panel">
+            <div class="icon">
+              <img class="icons" src="images/monsters/goblin.png" />
+            </div>
+            <div class="boss-stats">100 hp 20 dmg</div>
+            <div class="stat-gain">1 hp 2 dmg</div>
+            <div class="kills">1000 kills</div>
+            <div class="fight">
+              <button class="fight" onclick="changeContent('battle')">
+                fight
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="achievements" class="panel-content" style="display: none">
+        <h1>achievements</h1>
+        <p>100 goblin kills</p>
+      </div>
+      <div id="battle" class="panel-content" style="display: none">
+        <h1>battle</h1>
+        <div class="playerPanel">
+          <div id="playerAtckSpdBar">
+            <div id="playerAtckSpdBarProgress"></div>
+          </div>
+        </div>
+        <div class="monsterPanel"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+
+</html>
